@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(to right, rgba(11, 2, 20, 0.9), rgba(1, 19, 20, 0.9)100%), url(./img/background.jpg);
+    background-size: cover;
+    color: white;
+    font: normal 20pt arial;
+    text-align: center;
+}
+header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+section {
+    background: linear-gradient( to right, rgba(16, 188, 211, 0.4),rgba(122, 21, 218, 0.4)100%);
+    margin: auto;
+    width: 300px;
+    height: 350px;
+    padding: 50px;
+    border-radius: 10px;
+}
+footer {
+    margin-top: 20px;
+    font-size: 12pt;
+}
+#github {
+    margin-top: 20px;
+    width: 30px;
+    height: 30px;
+    opacity: 100%;
+}
+.dia {
+    font-size: 11pt;
+}
+.mes {
+    margin: 15px 0 5px 0;
+    font-size: 11pt;
+}
+.zod {
+    font-size: 10pt;
+    margin: 15px 0 5px 0;
+}
+.botao {
+    font-size: 10pt;
+    margin: 35px 0 5px 0;
+    padding: 2px 20px 0px 20px;
+    text-align: center;
+}
+.img { /* Imagem na cor branco */
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    margin-top: 20px;
+    overflow: visible;
+}
+

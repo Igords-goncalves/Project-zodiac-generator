@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zodiac</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>ZODIAC</h1>
+    </header>
+    <section>
+        <div class="data">
+            <p class="dia">DIA</p>
+            <p><input type="Number" name="dia" class="txtd"></p> <!--Variavel-->
+            <p class="mes">MÊS</p>
+            <p><input type="Number" name="mes" class="txtm"></p> <!--Variavel-->
+        </div>
+        <div class="result">
+            <p class="zod">ZODÍACO</p>
+            <input type="text" name="zodiac" class="txtz"> <!--Variavel-->
+        </div>
+        <div>
+            <input type="button" value="GO" class="botao" onclick="start()"> <!--funcao-->
+        </div>
+        <div class="img">
+            <img src="./img/question.png" alt="who" class="img">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; by Igor Gonçalves</p>
+        <a href="https://github.com/Igords-goncalves" target="blank"><img id="github" src="./img/github.png" alt="github"></a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
