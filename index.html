@@ -12,18 +12,30 @@
         <h1>ZODIAC</h1>
     </header>
     <section>
-        <div class="data">
+        <div class="data"> <!--Esses inputs serão transformados em selects-->
             <p class="dia">DIA</p>
-            <p><input type="Number" name="dia" class="txtd"></p> <!--Variavel-->
+            <input type="Number" min="1" max="31" name="dia" class="txtd"> <!--Variavel-->
             <p class="mes">MÊS</p>
-            <p><input type="Number" name="mes" class="txtm"></p> <!--Variavel-->
-        </div>
-        <div class="result">
-            <p class="zod">ZODÍACO</p>
-            <input type="text" name="zodiac" class="txtz"> <!--Variavel-->
+            <select type="Number" name="mes" class="txtm"> <!--Variavel-->
+                <option value="0">&nbsp &nbsp Janeiro</option>
+                <option value="1">&nbsp &nbsp Fevereiro</option>
+                <option value="1">&nbsp &nbsp Março</option>
+                <option value="1">&nbsp &nbsp Abril</option>
+                <option value="1">&nbsp &nbsp Maio</option>
+                <option value="1">&nbsp &nbsp Junho</option>
+                <option value="1">&nbsp &nbsp Julho</option>
+                <option value="1">&nbsp &nbsp Agosto</option>
+                <option value="1">&nbsp &nbsp Setembro</option>
+                <option value="1">&nbsp &nbsp Outubro</option>
+                <option value="1">&nbsp &nbsp Novembro</option>
+                <option value="1">&nbsp &nbsp Dezembro</option>
+            </select>
         </div>
         <div>
             <input type="button" value="GO" class="botao" onclick="start()"> <!--funcao-->
+        </div>
+        <div class="result">
+            <p class="zod">Aqui entra o nome do signo</p>
         </div>
         <div class="img">
             <img src="./img/question.png" alt="who" class="img">
