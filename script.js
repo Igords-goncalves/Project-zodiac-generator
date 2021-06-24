@@ -1,19 +1,20 @@
 function start() {
+    let zod = document.querySelector('p.zod');
     let dia = document.querySelector('input.txtd');
-    let mes = document.querySelector('input.txtm');
-    let zod = document.querySelector('div.result');
-
-     if (dia.value.length == 0 || mes.value.length == 0 || dia.value.length > 31 || mes.value.length > 12) { //Minimizando os errros
+    let mes = document.querySelector('select.txtm'); //Captura nao esta acontecendo
+    
+     if (dia.value.length == 0 || dia.value > 31 || dia.value == 0)  { //Alertas bem sucedidos
          window.alert('[ERRO] Digite o dia nascimento.');
-     } else { //Conversao de string p/ numero de novas variáveis
-        let d = Number(dia.value);
-        let m = Number(mes.value);
-        let z = Text(zod.textContent);
+         zod.innerHTML = 'testando conexão'; /*Captura bem sucessida!*/
+     }
+     //Preciso testar a captura de dia e mes
 
-        if ((d >= 21 && m == 3) || (d <= 20 && m == 4)) {
-          z = z.innerHTML('Ares');
+     else { //Conversao de string p/ numero em novas variáveis
+
+        if (Number(dia.value) >= 21) { //Captura e conversao ok funcionando
+          zod.innerHTML = 'Áries';
         }
-     } 
+     }
 }
 
 /* Use o switch case ........
