@@ -1,24 +1,71 @@
 function start() {
-    let zod = document.querySelector('p.zod');
-    let dia = document.querySelector('input.txtd');
-    let mes = document.querySelector('select.txtm');
-    let img = document.querySelector('img.img');
-    
-     if (dia.value.length == 0 || dia.value > 31 || dia.value == 0)  { //Alertas bem sucedidos
-         window.alert('[ERRO] Digite o dia nascimento.');
-         zod.innerHTML = 'testando conexão'; /*Captura bem sucessida!*/
-         
-        } else if (Number(dia.value) >= 21 && mes.value == "janeiro" ) { 
-          window.alert('deu certo') /*Captura bem sucessida!*/
-          zod.innerHTML = 'Áries';
-          img.src = './img/ares.png'
-        }
+  let zod = document.querySelector('p.zod');
+  let dia = document.querySelector('input.txtd');
+  let mes = document.querySelector('select.txtm');
+  let img = document.querySelector('img.img');
+  
+   if (dia.value.length == 0 || dia.value > 31 || dia.value == 0)  { 
+       window.alert('[ERRO] Digite o dia nascimento e escolha o mês.');
+       zod.innerHTML = 'testando conexão';
+    } else //Signos - Proxima etapa do programa, reduzir a quantidade de "IF"
+          if ((Number(dia.value) >=  22 && mes.value == "dezembro") || (Number(dia.value) <=  20 && mes.value == "janeiro")) { 
+            zod.innerHTML = 'Capricórnio';
+            img.src = './img/capricornio.png';
+          } else 
+                if ((Number(dia.value) >= 21 && mes.value == "janeiro" )|| (Number(dia.value) <=  18 && mes.value == "fevereiro")) {
+                  zod.innerHTML = 'Auário';
+                  img.src = './img/aquario.png';
+                } else
+                      if ((Number(dia.value) >= 19 && mes.value == "fevereiro" )|| (Number(dia.value) <=  20 && mes.value == "marco")) {
+                        zod.innerHTML = 'Peixes';
+                        img.src = './img/peixes.png';
+                      } else
+                            if ((Number(dia.value) >= 21 && mes.value == "marco" )|| (Number(dia.value) <=  20 && mes.value == "abril")) {
+                              zod.innerHTML = 'Áries';
+                              img.src = './img/ares.png';
+                            } else
+                                  if ((Number(dia.value) >= 21 && mes.value == "abril" )|| (Number(dia.value) <=  20 && mes.value == "maio")) {
+                                    zod.innerHTML = 'Touro';
+                                    img.src = './img/touro.png';
+                                  } else
+                                        if ((Number(dia.value) >= 21 && mes.value == "maio" )|| (Number(dia.value) <=  20 && mes.value == "junho")) {
+                                          zod.innerHTML = 'Gêmeos';
+                                          img.src = './img/gemeos.png';
+                                        } else
+    if ((Number(dia.value) >=  21 && mes.value == "junho") || (Number(dia.value) <=  22 && mes.value == "julho")) { 
+      zod.innerHTML = 'Câncer';
+      img.src = './img/cancer.png';
+    } else 
+          if ((Number(dia.value) >= 23 && mes.value == "julho" )|| (Number(dia.value) <=  22 && mes.value == "agosto")) {
+            zod.innerHTML = 'Leão';
+            img.src = './img/leao.png';
+          } else
+                if ((Number(dia.value) >= 23 && mes.value == "agosto" )|| (Number(dia.value) <=  22 && mes.value == "setembro")) {
+                  zod.innerHTML = 'Virgem';
+                  img.src = './img/virgem.png';
+                } else
+                      if ((Number(dia.value) >= 23 && mes.value == "setembro" )|| (Number(dia.value) <=  22 && mes.value == "outubro")) {
+                        zod.innerHTML = 'Libra';
+                        img.src = './img/libra.png';
+                      } else
+                            if ((Number(dia.value) >= 23 && mes.value == "outubro" )|| (Number(dia.value) <=  21 && mes.value == "novembro")) {
+                              zod.innerHTML = 'Escropião';
+                              img.src = './img/escorpiao.png';
+                            } else
+                                  if ((Number(dia.value) >= 22 && mes.value == "novembro" )|| (Number(dia.value) <=  21 && mes.value == "dezembro")) {
+                                    zod.innerHTML = 'Sargitário';
+                                    img.src = './img/sargitario.png';
+                                  } else
+                                        if (Number(dia.value) < 22 && mes.value == "dezembro" ) {
+                                          zod.innerHTML = 'Capricórnio';
+                                          img.src = './img/capricornio.png';
+                                        }
 }
-
-
-
-/* 
-Áries: de 21 março a 20 abril[aries, 2103, 2004]
+/*
+Capricórnio: de 22 dezembro a 20 janeiro
+Aquário: de 21 janeiro a 18 fevereiro
+Peixes: de 19 fevereiro a 20 março.
+Áries: de 21 março a 20 abril
 Touro: de 21 abril a 20 maio
 Gêmeos: de 21 maio a 20 junho
 Câncer: de 21 junho a 22 julho
@@ -27,33 +74,4 @@ Virgem: de 23 agosto a 22 setembro
 Libra: de 23 setembro a 22 outubro
 Escorpião: de 23 outubro a 21 novembro
 Sagitário: de 22 novembro a 21 dezembro
-Capricórnio: de 22 dezembro a 20 janeiro
-Aquário: de 21 janeiro a 18 fevereiro
-Peixes: de 19 fevereiro a 20 março. 
-
-jan "0" fev "1" mar "2" abr "3" mai "4" jun "5"
-jul "6" ago "7" set "8" out "9" nov "10" dez "11" 
-
-// ------------------------
-var dia = "22"; // input dia
-var mes = "janeiro"; //select 
-var img = { src: null } //<img src="" />
-
-var imagens = {
-    capricornio: "img/capricornio.jpg",
-    aquario: "img/aquario.jpg",
-    peixes: "img/peixes.jpg",
-    touro: "img/touro.jpg",
-}
-
-// object literals 
-var objSignoMes = {
-    janeiro: {
-        inicio_signo: "capricornio",
-        dia_limite: 21,
-        fim_signo: "aquario",
-    },
-    fevereiro: {
-        inicio_signo: "peixes",
-        dia_limite:
 */
