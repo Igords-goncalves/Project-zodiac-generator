@@ -1,21 +1,24 @@
 function start() {
     let zod = document.querySelector('p.zod');
     let dia = document.querySelector('input.txtd');
+
     let mes = document.querySelector('select.txtm'); //Captura nao esta acontecendo
     
      if (dia.value.length == 0 || dia.value > 31 || dia.value == 0)  { //Alertas bem sucedidos
          window.alert('[ERRO] Digite o dia nascimento.');
          zod.innerHTML = 'testando conexão'; /*Captura bem sucessida!*/
-     }
-     //Preciso testar a captura de dia e mes
 
-     else { //Conversao de string p/ numero em novas variáveis
-
-        if (Number(dia.value) >= 21) { //Captura e conversao ok funcionando
-          zod.innerHTML = 'Áries';
+        } else if (mes.value == "0") { //Captura bem sucesssida
+          window.alert('deu certo')
         }
-     }
 }
+
+else if (Number(dia.value) >= 21) { //Captura e conversao ok funcionando
+  zod.innerHTML = 'Áries';
+
+
+
+
 
 /* Use o switch case ........
 Áries: de 21 março a 20 abril
